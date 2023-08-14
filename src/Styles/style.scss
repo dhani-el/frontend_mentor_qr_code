@@ -1,0 +1,87 @@
+
+@font-face {
+    font-family: 'montserrat';
+    src: url('../assets/font/Montserrat-VariableFont_wght.ttf');
+}
+
+$background-color : hsl(212, 45%, 89%) ;
+$card-background-color : hsl(0, 0%, 100%) ;
+$header-text-color : hsl(218, 44%, 22%);
+$paragraph-text-color-alt :  hsl(220, 15%, 55%) ;
+$paragraph-font-size:15px;
+$font-weight-small:400;
+$font-weight-big:700;
+$font-family:montserrat;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: montserrat;
+}
+
+body{
+    background-color: $background-color;
+}
+
+
+#mainContainer{
+    width:100%;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    #card{
+        width: 85%;
+        height: 75%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5em;
+        padding: 1em;
+        background-color: $card-background-color;
+        border-radius: 1em;
+        img{
+            width: 100%;
+            height: auto;
+            border-radius: 1em;
+        }
+        #cardTextSection{
+            margin: 1em;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1em;
+            h1{
+                text-align: center;
+                font-size: 1.3em;
+                font-weight: $font-weight-big;
+                color: $header-text-color;
+            }
+            p{
+                font-size: $paragraph-font-size;
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media (orientation:'landscape') {
+    #mainContainer{
+        #card{
+            width: 23vw;
+            height: 70vh;
+            gap: 0.5em;
+            img{
+                height: 60%;
+            }
+            #cardTextSection{
+                h1{
+                    font-size: 1.3em;
+                }
+            }
+        }
+    }
+}

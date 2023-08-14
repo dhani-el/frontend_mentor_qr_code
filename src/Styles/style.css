@@ -1,0 +1,71 @@
+@font-face {
+  font-family: "montserrat";
+  src: url("../assets/font/Montserrat-VariableFont_wght.ttf");
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: montserrat;
+}
+
+body {
+  background-color: hsl(212, 45%, 89%);
+}
+
+#mainContainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#mainContainer #card {
+  width: 85%;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+  padding: 1em;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 1em;
+}
+#mainContainer #card img {
+  width: 100%;
+  height: auto;
+  border-radius: 1em;
+}
+#mainContainer #card #cardTextSection {
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+#mainContainer #card #cardTextSection h1 {
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: 700;
+  color: hsl(218, 44%, 22%);
+}
+#mainContainer #card #cardTextSection p {
+  font-size: 15px;
+  text-align: center;
+}
+
+@media (orientation: landscape) {
+  #mainContainer #card {
+    width: 23vw;
+    height: 70vh;
+    gap: 0.5em;
+  }
+  #mainContainer #card img {
+    height: 60%;
+  }
+  #mainContainer #card #cardTextSection h1 {
+    font-size: 1.3em;
+  }
+}/*# sourceMappingURL=style.css.map */
